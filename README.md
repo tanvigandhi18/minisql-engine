@@ -1,29 +1,29 @@
- ````markdown
-# MiniSQL – A Lightweight SQL Engine in Python
 
-MiniSQL is a custom-built SQL query engine and interpreter developed from scratch using Python. It supports parsing, executing, and persisting SQL operations, powered by a custom grammar (via Lark), an interactive CLI, and a FastAPI web interface with a visual query builder.
+**MiniSQL: Custom Relational Query Engine in Python**
 
----
-
-## Features
-
-- Custom SQL parser using Lark (AST generation)  
-- Support for core SQL statements:
-  - `CREATE TABLE`
-  - `INSERT INTO ... VALUES (...)`
-  - `SELECT` with optional `WHERE`
-  - `UPDATE ... SET ... WHERE`
-  - `DELETE FROM ... WHERE`
-
-- In-memory table representation with schema enforcement  
-- JSON-based persistence (tables are saved and loaded automatically)  
-- Web interface with:
-  - Drag-and-drop SQL building blocks
-  - Live results rendered as HTML tables
-  - REST API endpoint for query execution
+MiniSQL is a lightweight SQL engine developed from scratch in Python. It can parse and execute SQL queries on in-memory tables, using a custom grammar built with Lark. The project includes both a command-line interface and a FastAPI-powered web interface, featuring drag-and-drop SQL block support and live result visualization.
 
 ---
 
+**Key Features:**
+
+* Custom SQL grammar parser using Lark (AST-based design)
+* Supports key SQL operations:
+
+  * CREATE TABLE
+  * INSERT INTO ... VALUES (...)
+  * SELECT with column filtering and WHERE clauses
+  * UPDATE ... SET ... WHERE
+  * DELETE FROM ... WHERE
+* In-memory data storage with schema validation
+* Persistent table storage via auto-saved JSON files
+* Web interface features:
+
+  * Drag-and-drop SQL query builder
+  * Interactive HTML-based result display
+  * REST API for query execution
+
+---
 ## Sample Queries
 
 ```sql
@@ -37,7 +37,6 @@ SELECT name FROM students WHERE id = 1;
 UPDATE students SET name = "Charlie" WHERE id = 2;
 DELETE FROM students WHERE name = "Charlie";
 ````
-
 ---
 
 ## How to Run
